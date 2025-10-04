@@ -1,0 +1,154 @@
+/* 
+ * DEMORI - THE DIVIDED CITY
+ * A stark visual divide between the bright, organized top and the dark, scary bottom.
+ */
+
+:root {
+  --gold: #d4af37;
+  --crystal: #e3f2fd;
+  --marble: #f5f5f0;
+  --rust: #8b4513;
+  --decay: #2a1810;
+  --shadow: #0d0907;
+}
+
+/* Base page styling */
+.demori-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Bright Zone - Top Half */
+.bright-zone {
+  background: linear-gradient(180deg, 
+    #fef9f0 0%,
+    #fff5e6 50%,
+    #f0e4d7 100%
+  );
+  padding: 20px;
+  border-bottom: 4px solid var(--gold);
+  box-shadow: 0 5px 30px rgba(212, 175, 55, 0.4);
+  color: #163f2e; /* Dark green base text for upper city */
+}
+
+.bright-zone .site-header {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.bright-zone h1, .bright-zone h2, .bright-zone h3 {
+  color: #1f5a3f; /* Heading dark green */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.bright-zone ol li {
+  background: rgba(255, 255, 255, 0.5);
+  border-left: 3px solid var(--gold);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: #163f2e; /* ensure list text is dark green */
+}
+
+.bright-zone blockquote {
+  border-left: 3px solid var(--gold);
+  background: rgba(212, 175, 55, 0.05);
+  color: #254b3f; /* Blockquote dark green */
+}
+
+/* Make all standard text elements in the bright zone use the dark green */
+.bright-zone p,
+.bright-zone li,
+.bright-zone strong,
+.bright-zone em,
+.bright-zone span,
+.bright-zone td,
+.bright-zone th {
+  color: #163f2e;
+}
+
+/* Ensure previously-special paragraphs/phrases also match */
+.bright-zone .oracle-p,
+.bright-zone .upper-em {
+  color: #163f2e !important;
+}
+
+/* Small emphasis color for specific phrases in the upper city */
+.bright-zone .upper-em {
+  color: #444444; /* dark gray */
+  font-weight: 600;
+}
+
+/* Links in the bright zone: replace default blue with darker green for readability */
+.bright-zone a {
+  color: #1f5a3f;
+  text-decoration: underline;
+}
+.bright-zone a:hover{
+  color: #163f2e;
+}
+
+/* Dark Zone - Bottom Half */
+.dark-zone {
+  background: linear-gradient(0deg,
+    #0a0604 0%,
+    #1a0f0a 50%,
+    #3a211a 100%
+  );
+  color: #8b7355;
+  padding: 20px;
+}
+
+#undercity-divide {
+  text-align: center;
+  font-size: 2.5em;
+  color: var(--rust);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  padding: 40px 0;
+  margin: 0;
+  border-top: 2px solid var(--rust);
+  border-bottom: 2px solid var(--decay);
+  background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.dark-zone ol {
+  list-style: none;
+  padding: 0;
+}
+
+.dark-zone ol li {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid var(--rust);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transform: skewX(-2deg);
+}
+
+.dark-zone ol li:nth-child(odd) {
+  transform: skewX(2deg);
+}
+
+.dark-zone strong {
+  color: #b8956f;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.dark-zone .site-footer {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  padding-top: 40px;
+  color: #6b5444;
+}
+
+/* Specific paragraph color for The Oracle Galleries */
+.oracle-p {
+  color: #444444; /* dark gray */
+}
