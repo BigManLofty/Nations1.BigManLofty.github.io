@@ -1,0 +1,136 @@
+/* Skyvard page styles: storm, lightning, floating islands, ships */
+.skyvard-page{background:linear-gradient(180deg,#041423 0%, #071226 65%)}
+.sky-hero{position:relative;overflow:hidden;height:380px;margin:18px 0 26px;border-radius:10px}
+.sky-canvas{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 10%, rgba(8,18,30,0.6), rgba(2,6,12,0.9));pointer-events:none}
+.cloud{position:absolute;border-radius:50%;background:rgba(255,255,255,0.06);filter:blur(14px)}
+.cloud--1{width:1200px;height:260px;left:-30%;top:6%;animation:cloudMove 46s linear infinite}
+.cloud--2{width:750px;height:170px;left:-10%;top:30%;animation:cloudMove 28s linear infinite}
+.cloud--3{width:420px;height:110px;left:10%;top:56%;animation:cloudMove 18s linear infinite}
+
+.lightning{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen}
+.lightning:before{content:'';position:absolute;left:var(--bolt-left,54%);top:8%;width:6px;height:240px;background:linear-gradient(180deg,#ffffff,#cfe8ff00);transform:translateX(-50%) skewX(-6deg);opacity:0;filter:drop-shadow(0 0 24px rgba(180,220,255,0.95))}
+
+/* Active strike (triggered by JS) */
+.lightning.active:before{animation:boltStrike 700ms ease-in-out forwards}
+
+.islands{position:absolute;inset:0;z-index:8;pointer-events:none}
+.island{position:absolute;top:48%;transform:translateY(-50%)}
+.island--left{left:6%;animation:islandFloat 9s ease-in-out infinite}
+.island--center{left:42%;animation:islandFloat 11s ease-in-out infinite}
+.island--right{right:6%;animation:islandFloat 10s ease-in-out infinite}
+.island--upper-left{left:20%;top:30%;animation:islandFloat 12s ease-in-out infinite}
+.island--upper-right{right:20%;top:28%;animation:islandFloat 13s ease-in-out infinite}
+.island-card{
+  position:relative;
+  display:inline-block;
+  padding:14px 20px;
+  border-radius:12px;
+  color:#f3feff;
+  font-weight:800;
+  text-align:center;
+  /* grassy top gradient */
+  background: linear-gradient(180deg,#88e197 0%, #3aa25b 55%, #2e6b46 100%);
+  box-shadow: 0 18px 42px rgba(2,6,23,0.6);
+  border:1px solid rgba(255,255,255,0.04);
+  transform-style:preserve-3d;
+}
+
+/* rocky underside */
+.island-card::before{
+  content:'';
+  position:absolute;
+  left:6%;
+  right:6%;
+  bottom:-28px;
+  height:36px;
+  background: linear-gradient(180deg,#5a4a3e,#35261e);
+  border-radius:30% 30% 18% 18% / 40% 40% 18% 18%;
+  transform:translateZ(-1px) skewX(-6deg);
+  z-index:-2;
+  box-shadow: inset 0 -8px 18px rgba(0,0,0,0.45), 0 18px 30px rgba(2,6,23,0.6);
+}
+
+/* dangling roots (multiple thin strands) */
+.island-card::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-60px;
+  width:6px;
+  height:54px;
+  background:linear-gradient(180deg,#6b3f2a,#402516);
+  transform:translateX(-50%);
+  border-radius:3px;
+  box-shadow: -18px 10px 0 #4a2f20, 18px 18px 0 #4a2f20;
+  z-index:-2;
+  opacity:0.95;
+}
+
+/* cast shadow under island (soft) */
+.island::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-12px;
+  width:180px;
+  height:36px;
+  transform:translateX(-50%);
+  background:radial-gradient(ellipse at center, rgba(0,0,0,0.55), rgba(0,0,0,0.12) 45%, transparent 70%);
+  filter:blur(10px);
+  z-index:5;
+}
+
+.ships{position:absolute;inset:0;z-index:9;pointer-events:none}
+.ship{position:absolute;top:62%}
+.ship--one{left:28%;width:120px;height:40px;background:linear-gradient(180deg,#cfe8ff22,#0000);border-radius:8px;animation:shipDrift 12s linear infinite}
+.ship--two{left:68%;width:90px;height:30px;background:linear-gradient(180deg,#bfdfff22,#0000);border-radius:8px;animation:shipDrift 18s linear infinite}
+
+/* Animations */
+@keyframes cloudMove{from{transform:translateX(-20%)}to{transform:translateX(120%)}}
+@keyframes lightFlare{0%,86%{opacity:0}87%{opacity:0.9}88%{opacity:0}92%{opacity:0.7}96%{opacity:0}100%{opacity:0}}
+@keyframes islandFloat{0%{transform:translateY(-50%)}50%{transform:translateY(-64%)}100%{transform:translateY(-50%)}}
+@keyframes shipDrift{0%{transform:translateX(-6%) translateY(0)}50%{transform:translateX(6%) translateY(-18px)}100%{transform:translateX(-6%) translateY(0)}}
+
+@keyframes boltStrike{0%{opacity:0;transform:scaleY(0.2)}85%{opacity:0}86%{opacity:1;transform:scaleY(1)}88%{opacity:0}95%{opacity:0.6}100%{opacity:0}}
+
+/* responsive */
+/* Ensure page text is above animated hero */
+.site-header{position:relative;z-index:20;background:linear-gradient(90deg,#081a28cc,#061020cc);backdrop-filter:blur(4px)}
+.content{position:relative;z-index:20;background:rgba(3,10,18,0.6);padding:22px;border-radius:10px}
+.content h2,.content p,.content ul{color:#e6f7ff}
+
+/* Rain overlay and text flash */
+.rain-layer{position:absolute;inset:0;pointer-events:none;z-index:19;overflow:hidden}
+.raindrop{position:absolute;width:2px;height:14px;background:linear-gradient(180deg, rgba(200,225,255,0.9), rgba(180,210,255,0.2));opacity:0.9;filter:blur(0.2px);transform:translateY(-20px)}
+.content.flash{box-shadow:0 0 40px rgba(200,230,255,0.25), inset 0 0 18px rgba(200,230,255,0.04);transition:box-shadow 120ms ease-in-out}
+.content.flash h2,.content.flash p,.content.flash li{color:#fffefc;text-shadow:0 2px 12px rgba(180,220,255,0.85)}
+
+/* text lightning sweep that runs across the content */
+.text-strike{
+  position:absolute;
+  left:0;top:0;bottom:0;pointer-events:none;
+  width:100%;
+  z-index:25; /* above content */
+  overflow:hidden;
+}
+.text-strike .sweep{
+  position:absolute;left:-30%;top:0;bottom:0;width:40%;
+  background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(210,240,255,0.22) 50%, rgba(255,255,255,0) 100%);
+  filter:blur(6px);
+  transform:translateX(0);
+  animation: textBolt 420ms ease-in-out forwards;
+}
+
+@keyframes textBolt{
+  0%{transform:translateX(-120%);opacity:0}
+  30%{opacity:1}
+  100%{transform:translateX(220%);opacity:0}
+}
+
+@media (max-width:700px){
+  .sky-hero{height:240px}
+  .island{display:none}
+  .ship{display:none}
+}
+
+@keyframes fall{to{transform:translateY(120vh);opacity:0}}

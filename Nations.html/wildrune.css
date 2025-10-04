@@ -1,0 +1,47 @@
+/* Wildrune-only styles: verdant, organic, nature-themed */
+.site-header{background:linear-gradient(90deg,#0b2612 0%, #073217 60%);padding:28px 0;border-radius:8px}
+.site-header h1{color:#dfffe6}
+.subtitle{color:#bfe7c9}
+.wildrune-hero{height:220px;margin:18px 0 26px;border-radius:10px;background:radial-gradient(circle at 20% 20%, rgba(144,238,144,0.06), rgba(6,30,12,0.6));box-shadow:inset 0 40px 80px rgba(4,20,8,0.4)}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.content{background:linear-gradient(180deg, rgba(10,30,15,0.02), rgba(6,18,10,0.02));padding:18px;border-radius:10px}
+.content h2{color:#e8ffe9}
+.content p{color:#d9f7de}
+.site-footer{background:linear-gradient(90deg,#072817,#042112);color:#bfe7c9;padding:18px;border-radius:6px;margin-top:28px;text-align:center}
+
+/* Leafy accent divider */
+.leaf-divider{height:6px;background-image:linear-gradient(90deg,#8be28a,#4fbf6f);border-radius:6px;margin:14px 0}
+
+@media (max-width:600px){
+  .wildrune-hero{height:140px}
+}
+
+/* Wild visuals */
+.wildrune-hero{position:relative;overflow:hidden}
+.wildrune-hero .hero-inner{position:relative;padding:28px;display:flex;align-items:center;justify-content:center}
+.hero-tree{width:260px;height:auto;opacity:0.98;filter:drop-shadow(0 20px 30px rgba(2,6,23,0.5))}
+.vines{position:absolute;top:0;bottom:0;width:160px;background-image:linear-gradient(180deg, rgba(12,50,20,0.06), rgba(6,20,10,0.06));pointer-events:none}
+.vines.vine-left{left:0;transform:skewX(-6deg);background-repeat:no-repeat;animation:swayLeft 6s ease-in-out infinite}
+.vines.vine-right{right:0;transform:skewX(6deg);animation:swayRight 7s ease-in-out infinite}
+
+.spores{position:absolute;inset:0;pointer-events:none}
+.spore{position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle,#dfffe0,#6fe07a);opacity:0.9;filter:blur(.6px)}
+.s1{left:12%;top:40%;animation:sporeDrift 9s linear infinite}
+.s2{left:24%;top:62%;animation:sporeDrift 11s linear infinite}
+.s3{left:62%;top:22%;animation:sporeDrift 7s linear infinite}
+.s4{left:78%;top:48%;animation:sporeDrift 13s linear infinite}
+.s5{left:46%;top:72%;animation:sporeDrift 10s linear infinite}
+
+@keyframes sporeDrift{
+  0%{transform:translateY(0) translateX(0) scale(0.9);opacity:0.95}
+  50%{transform:translateY(-28px) translateX(14px) scale(1.25);opacity:0.7}
+  100%{transform:translateY(0) translateX(-8px) scale(0.95);opacity:0.95}
+}
+
+@keyframes swayLeft{0%,100%{transform:translateX(0) skewX(-6deg)}50%{transform:translateX(6px) skewX(-2deg)}}
+@keyframes swayRight{0%,100%{transform:translateX(0) skewX(6deg)}50%{transform:translateX(-6px) skewX(2deg)}}
+
+.wild-content{padding-top:12px}
+.wild-content h2{font-family:Georgia,serif;color:#e8ffef;letter-spacing:0.4px}
+.wild-content p{color:#eafbee}
+
