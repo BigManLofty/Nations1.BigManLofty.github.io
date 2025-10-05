@@ -1,0 +1,29 @@
+/* Misso page - sleek white mask theme */
+:root{
+  --white-bg: #fbfbfb;
+  --panel: #ffffff;
+  --muted: #8b8b8b;
+  --accent: #d9dbe0;
+  --ink: #222222;
+}
+
+.misso-page{ background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%); font-family: Inter, system-ui, sans-serif }
+
+.mask-hero{ width:100%; height:120px; overflow:hidden; display:block; margin-bottom:18px }
+
+.site-header{ background: transparent; border: none; box-shadow: none; text-align:center }
+.site-header h1{ letter-spacing:4px; color:var(--ink); font-weight:800 }
+.site-header .subtitle{ color:var(--muted); font-style:italic }
+
+.container.content{ max-width:900px; margin: 0 auto; padding: 18px; background: linear-gradient(180deg,#ffffff, #fcfcfd); border-radius:12px; box-shadow:0 12px 40px rgba(0,0,0,0.06) }
+
+.content h2{ color:var(--ink); letter-spacing:1px }
+.content p, .content li{ color:var(--muted); line-height:1.6 }
+.content ul{ margin-left:18px }
+
+/* mask accents: small corner mask icon on headings */
+.content h2::before{ content: '◑'; margin-right:8px; color:var(--accent); font-size:0.9em }
+
+.site-footer{ text-align:center; color:var(--muted); padding:22px }
+
+@media (max-width:720px){ .container.content{ padding:14px } }

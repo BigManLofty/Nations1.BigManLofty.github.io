@@ -1,0 +1,47 @@
+/* Deviates page - Cyberpunk theme */
+:root{
+  --bg-dark: #070814;
+  --panel: rgba(255,255,255,0.04);
+  --neon-cyan: #00f0ff;
+  --neon-pink: #ff4da6;
+  --neon-purple: #b48cff;
+  --muted: #c7d2ff;
+}
+
+.deviates-page{ background: linear-gradient(180deg, #05060b 0%, #081023 100%); color: #cfe6ff; font-family: Inter, system-ui, sans-serif }
+
+.deviates-hero{ margin: 18px 0 6px 0; border-radius:8px; overflow:hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.6) }
+
+.container.content{ max-width:1000px; margin: 0 auto; padding: 20px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; border:1px solid rgba(255,255,255,0.03) }
+
+.content h2{ color:var(--neon-cyan); text-shadow: 0 0 14px rgba(0,240,255,0.08); letter-spacing:1px }
+
+.content p, .content li{ color: #d7e9ff; line-height:1.6 }
+
+.content ul{ margin-left:18px }
+
+/* neon labels */
+.content h2::after{ content: ' ◈'; color: var(--neon-pink); text-shadow:0 0 12px rgba(255,77,166,0.18) }
+
+/* card-like list effect */
+.content ul li{ background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); margin:12px 0; padding:12px; border-radius:8px; border-left: 4px solid rgba(0,240,255,0.06); box-shadow: 0 6px 20px rgba(0,0,0,0.6) }
+
+/* glitchy headings */
+.site-header{ text-align:center; padding-top:10px }
+.site-header h1{ color:var(--neon-pink); letter-spacing:2px; font-weight:800; text-shadow: 0 0 8px rgba(255,77,166,0.2) }
+.site-header .subtitle{ color:#aabffb }
+
+/* interactive neon links */
+.content a{ color:var(--neon-cyan); text-decoration:underline }
+.content a:hover{ color:var(--neon-pink); text-shadow: 0 0 10px rgba(255,77,166,0.14) }
+
+/* small animated accent */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0,240,255,0.06) }
+  70% { box-shadow: 0 0 20px 12px rgba(0,240,255,0.02) }
+  100% { box-shadow: 0 0 0 0 rgba(0,240,255,0) }
+}
+
+.content h2 { animation: pulse 6s ease-in-out infinite }
+
+@media (max-width:720px){ .deviates-hero{ height:120px } .container.content{ padding:14px } }
