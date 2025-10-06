@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WILDRUNE — The Breath of Magic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="wildrune.css">
+  </head>
+  <body class="wildrune-page">
+    <header class="site-header">
+      <div class="container">
+        <h1>WILDRUNE — THE BREATH OF MAGIC</h1>
+        <p class="subtitle">"The roots remember, even if we forget."</p>
+        <p class="nav"><a href="index.html">← Back to list</a></p>
+      </div>
+    </header>
+    <!-- Wildrune hero: living tree, drifting spores, swaying vines -->
+    <div class="wildrune-hero" aria-hidden="true">
+      <div class="vines vine-left" aria-hidden="true"></div>
+      <div class="vines vine-right" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <!-- Simple decorative SVG tree: stylized canopy and roots -->
+        <svg class="hero-tree" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#bff5c9" />
+              <stop offset="1" stop-color="#4fbf6f" />
+            </linearGradient>
+            <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="2"/>
+            </filter>
+          </defs>
+          <g transform="translate(100,18)">
+            <ellipse cx="0" cy="0" rx="78" ry="28" fill="url(#g1)" opacity="0.95" filter="url(#blur)"/>
+            <path d="M-8 12 C -18 28, -34 46, -28 60 C -22 74, -6 78, 0 88 C 6 78, 22 74, 28 60 C 34 46, 18 28, 8 12 Z" fill="#115422" opacity="0.95"/>
+            <rect x="-6" y="48" width="12" height="44" rx="3" fill="#6a3f1d" />
+            <path d="M-36 92 C -18 98, -6 110, 0 112 C 6 110, 18 98, 36 92" stroke="#2e5a2f" stroke-width="3" fill="none" opacity="0.7"/>
+          </g>
+        </svg>
+
+        <!-- drifting spores/leaves -->
+        <div class="spores">
+          <span class="spore s1"></span>
+          <span class="spore s2"></span>
+          <span class="spore s3"></span>
+          <span class="spore s4"></span>
+          <span class="spore s5"></span>
+        </div>
+      </div>
+    </div>
+
+    <main class="container content wild-content">
+      <h2>I. OVERVIEW</h2>
+      <p>Wildrune is not a nation in the traditional sense. It is a living land, a verdant soulbound wilderness, and a refuge of ancient druids, beastfolk, and arcane traditions untouched by imperial hands. Hidden by illusionary storms, warding canopies, and divine rites, Wildrune’s existence was long treated as myth by outsiders. But fifty years ago, in the wake of the Godfall, the veil thinned—and the world remembered Wildrune again.</p>
+
+      <div class="leaf-divider" aria-hidden="true"></div>
+
+      <h2>II. POLITICAL & SPIRITUAL ORDER</h2>
+      <p>Wildrune is led not by monarchs or councils, but by the Circles of Voice—groups of ancient druids, shamanic spirits, and fey-bound interpreters of the land’s will. The highest circle is the Circle of the First Breath, residing in the Canopy Sanctum, a temple of interwoven living trees older than recorded history.</p>
+      <p>Each region (Gladeholds) is semi-autonomous, governed by its own Circle: Thornreach, Virellian Hollow, Lorrien’Va, and Myrrwood Deep. These circles defer to the land itself. Major decisions are not made until omens are interpreted, and the Wildheart’s rhythm is consulted.</p>
+
+      <h2>III. THE WILDHEART</h2>
+      <p>At the core of Wildrune lies the Wildheart—a colossal, breathing, magical entity entwined deep within the roots of the world. It is not a god, but something more ancient and unknowable. Its pulses dictate tides, storms, and flowering seasons. Those attuned to it can feel its emotional will—like sorrow before a wildfire, or joy when rains cleanse the canopy.</p>
+
+      <h2>IV. MAGIC & CULTURE</h2>
+      <p>Wildrune embraces all magic as a natural expression of self—sorcery is singing, druidry is breathing, bardic art is memory given root. All beings are taught to bond with a Totemic Echo—a beast, element, or emotion that shapes their identity. Elders can conjure full ancestral memories, and trees act as memory libraries.</p>
+
+  <div class="leaf-divider" aria-hidden="true"></div>
+
+      <h2>V. FOREIGN RELATIONS</h2>
+      <p>Wildrune shuns outsiders, but is not without diplomacy—especially after the colonial incursions by Deviates and Demori, who claim a “divine right” to sacred blooms that sprouted near Wildrune’s edges. Skyvard was the first to ally with Wildrune, offering stormsteel, secrets, and shared hatred for arcane tampering. Demori’s attempts to establish “research enclaves” have been met with open druidic warfare.</p>
+
+      <h2>VI. RECENT EVENTS</h2>
+      <ul>
+        <li>The Sacred Bloom of Ylluvien, a flower tied to the newly reborn goddess of memory, appeared in Wildrune. Scholars from Demori claim it belongs to their theology. Wildrune disagrees—violently.</li>
+        <li>Some in Wildrune’s youth question the Circle’s non-interventionist ways and seek more active resistance.</li>
+        <li>A tree in Myrrwood began to bleed black ichor and whisper "Fyrrax watches." It has since been cordoned off.</li>
+      </ul>
+
+      <hr />
+
+      <h3>THE ECONOMY OF MAGIC</h3>
+      <h4>Magic as Currency</h4>
+      <p>In Demori and its satellite nations, spellcasting itself is a form of currency.</p>
+      <ul>
+        <li><strong>Spell Tokens</strong> – In the Upper City, the Summorum issues tightly controlled spell tokens, each containing a single-use cantrip or low-level spell imbued into a coin-like object. These are traded for services, and used by commoners who otherwise lack training.</li>
+        <li><strong>Arcane Favors</strong> – A more elite form of exchange. A minor enchantment placed on one’s door, a 10-minute ward for travel, or an hour of illusion masking your identity—these can be traded in lieu of gold.</li>
+        <li><strong>Soul Contracts</strong> – In the black market and undercity, magic is more desperate. Emotion dealers barter branded soul contracts, offering real magic for a cut of your spirit’s essence over time.</li>
+      </ul>
+
+      <h4>Magical Licensing</h4>
+      <p>Each nation regulates the use of magic differently:</p>
+      <ul>
+        <li><strong>Demori:</strong> Magic licenses are granted by the Summorum and expire yearly unless renewed via test or fee. Unauthorized spellcasting above 2nd level is a felony for non-licensed users. Repeat offenders are either branded, imprisoned, or conscripted into magical labor battalions.</li>
+        <li><strong>Deviates:</strong> Slightly more liberal. Anyone can cast spells under 3rd level, but official jobs (magical courier, combat mage, diviner, etc.) require certification.</li>
+        <li><strong>Skyvard:</strong> Magic use is survival. Any citizen who can wield it is expected to use it in service of stormfront defense. Independent use is legal, but heavily tracked.</li>
+        <li><strong>Wildrune:</strong> Magic is a right, not a resource. All citizens grow up with druidic rites and arcane familiarity. They view Demori’s restrictions as blasphemous.</li>
+      </ul>
+
+      <h4>The Arcana Trade</h4>
+      <p>The arcane economy is also material:</p>
+      <ul>
+        <li><strong>Spell Components:</strong> Rarer components (dragon teeth, lunar silver, whisper thorns) are worth more than gold.</li>
+        <li><strong>Magitech:</strong> Devices combining arcane runes and mechanical function—like message globes, levitating carts, memory beads—are high-value trade goods. Demori monopolizes their creation.</li>
+        <li><strong>Emotional Energy:</strong> Since the invention of the branding marks, artificial joy, rage, fear, and despair are harvested and stored in emotion phials. Black markets use these to empower enchantments.</li>
+      </ul>
+
+      <h4>Taxation of Magic</h4>
+      <ul>
+        <li><strong>Spell Tax:</strong> In Demori, each licensed caster must register spells above 1st level for taxation purposes.</li>
+        <li><strong>Divine Tithe:</strong> Clerics and paladins must donate divine miracles to the state temple registry. Refusal to do so can result in divine sanction (or so it's said).</li>
+      </ul>
+
+      <h4>Wildrune’s Resistance</h4>
+      <p>Wildrune doesn’t believe magic should be taxed, limited, or bought. They refuse to sell spell components or enchantments to outsiders. As Demori encroaches, Wildrune druids have begun "spoiling" magical land: making trees bleed poison, turning healing pools acidic, or enchanting animals to attack those bearing foreign sigils.</p>
+
+      <h4>Magic as Class Warfare</h4>
+      <p>The rich enchant their homes, their bodies, and their minds. The poor sell their memories to wizards, lease their dreams to illusionists, or undergo branding to receive food stipends. The world itself is alive with magic—but who controls it defines who survives.</p>
+      <h2>ECONOMY</h2>
+      <h3>INTRODUCTION</h3>
+      <p>Magic in this world has reshaped economic power, especially in Demori and Deviates, where arcane advancements have overtaken industrial development. With wild magic more accessible than ever, economics is not just a matter of gold or labor, but also of arcane permissions, magical resources, and divine sponsorship.</p>
+
+      <h3>WILDRUNE</h3>
+      <p><strong>Primary Economic Drivers:</strong></p>
+      <ul>
+        <li>Spirit-bound goods (plants that sing, lumber that heals)</li>
+        <li>Hidden caches of pre-Branding era arcana</li>
+        <li>Whisper-trade with rogue Demori sorcerers</li>
+      </ul>
+
+      <p><strong>Trade Ethics:</strong></p>
+      <p>Barter-based, relational economy. Money has no meaning without trust. Magical contracts are considered sacred. Betrayal of one breaks all.</p>
+
+      <p><strong>Tensions:</strong></p>
+      <ul>
+        <li>Every Demori ship in Wildrune waters is both a trade offer and a threat.</li>
+        <li>Druidic magic is being copied and sold in the Upper World.</li>
+      </ul>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">Wildrune — The Breath of Magic</div>
+    </footer>
+  </body>
+</html>
